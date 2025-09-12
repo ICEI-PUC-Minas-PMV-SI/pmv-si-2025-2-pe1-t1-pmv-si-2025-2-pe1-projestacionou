@@ -1,4 +1,4 @@
-# Título do Projeto
+# Estacionou!
 
 `CURSO: Sistemas de Informação`
 
@@ -6,20 +6,20 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Ferramenta web de front-end que utilizará recursos de geolocalização e armazenamento local para simular de forma eficaz uma plataforma colaborativa para a identificação e o compartilhamento de vagas de estacionamento em tempo real em uma área urbana.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-
+* Mateus Santos Toledo
+* Henrique Wilde Emilio Bebiano Martins
+* João Pedro Pereira Almeida
+* José Guilherme Chaves Albert
+* Lucas Gabriel Chaves Nogueira de Moura
+* Matheus da Silva Câmara
 
 ## Orientador
 
-* Nome completo do professor 1
+* Marco Rodrigo Costa
 
 # Planejamento
 
