@@ -3,12 +3,12 @@
 **Perfis de Usuários**
 
 |Motoristas Diários                                                                                                                                            |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------| |Descrição: 	Indivíduos que utilizam o carro diariamente para realizar atividades do cotidiano em áreas de alta densidade populacional.                        |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------| |Descrição: 	Indivíduos que utilizam o carro diariamente para realizar atividades do cotidiano em áreas de alta densidade populacional.                       |
 |Necessidades: 	Otimização do tempo ao reduzir o período gasto procurando estacionamento; Redução do estresse causado pela busca de vagas de estacionamento.   |
 
 |Motoristas a Trabalho                                                                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|Descrição: 	Profissionais que se deslocam a trabalho e dependem de seus veículos para realizarem suas atividades.                                             |
+|Descrição: 	Profissionais que se deslocam a trabalho e dependem de seus veículos para realizarem suas atividades.                                            |
 |Necessidades: 	Otimização do tempo ao reduzir o período gasto procurando estacionamento; Encontrar estacionamento que possibilite uma longa permanência e com | |maior custo-benefício.                                                                                                                                        |
 
 |Profissional de entregas (logística urbana)                                                                                                                   |
@@ -20,7 +20,7 @@
 |Estudantes                                                                                                                                                    |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Descrição:	Pessoas que utilizam seus veículos para se deslocarem até a instituição de ensino, e precisam deixá-lo estacionado durante sua permanência no local| |de estudo.                                                                                                                                                    |
-|Necessidades:	Buscar vagas de estacionamento próximas à sua instituição de ensino; Poupar tempo para evitar atrasos.                                          |
+|Necessidades:	Buscar vagas de estacionamento próximas à sua instituição de ensino; Poupar tempo para evitar atrasos.                                         |
 
 |Idosos e Pessoas com Deficiência                                                                                                                              |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -73,9 +73,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
-
+|RF-001| O sistema deve permitir o usuário visualizar um mapa de sua região | ALTA |  
+|RF-002| O mapa deve ser centralizado com base na geolocalização do dispositivo do usuário  | ALTA |
+|RF-003| O sistema deve permitir ao usuário criar um marcador de vaga em sua localização   | ALTA |
+|RF-004| O sistema deve permitir ao usuário visualizar dados sobre tempo de permanência, horário de criação do marcador   | ALTA |
+|RF-005| O sistema deve permitir ao usuário visualizar marcadores de vaga de outros usuários  | MÉDIA |
+|RF-006| O sistema deve permitir ao usuário visualizar qual o tipo da vaga de estacionamento   | MÉDIA |
+|RF-007| O sistema deve permitir ao usuário visualizar e manipular informações sobre os marcadores de vaga   | MÉDIA |
+|RF-008| O software deve conter uma tela com inputs para acessar a tela de login   | MÉDIA |
+|RF-009| O software deve conter uma tela com inputs para acessar a tela de cadastro   | MÉDIA |
+|RF-010| O sistema deve permitir ao usuário cadastrar seu estacionamento particular   | BAIXA |
+|RF-011| O sistema deve conter uma página destinada ao proprietário de estacionamento que permita o controle das vagas disponíveis, entrada/saída, etc.  | BAIXA |
+|RF-012| O sistema deve informar ao usuário a disponibilidade de vagas no estacionamento particular, baseado nos dados inseridos pelo proprietário | BAIXA |
 
 ### Requisitos não Funcionais
 
