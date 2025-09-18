@@ -1,54 +1,43 @@
 # Introdução
 
-Imagine que você deseja apresentar este projeto para investidores que deverão decidir se investem ou não no desenvolvimento da sua ferramenta.
+O problema da mobilidade é comum em diversos países ao redor do mundo. Curiel et al. (2021) enfatizam que o número de automóveis cresceu significativamente nas últimas décadas, sendo o principal responsável pelo aumento da poluição atmosférica, contribuindo com cerca de 4% do total de dióxido de carbono emitido globalmente. Atualmente, são produzidos mais de 80 milhões de veículos por ano em todo o mundo. Os autores ainda destacam que as cidades demandam investimentos crescentes em infraestrutura e na ampliação de seus espaços, o que, de maneira geral, tem sido realizado de forma altamente ineficiente.
 
-A **Introdução** consiste das etapas: *Contextualização -- Definição do problema -- Definição dos Objetivos -- Justificativa*, e tem como função situar o seu trabalho dentro de um contexto de mercado e mostrar a importância da sua proposta para resolver a dor de um usuário.
+Outro fator que agrava a situação é a frota de veículos de carga e descarga nos grandes centros urbanos. Estudos como o de Silva e Alho (2017) ressaltam que, nas últimas décadas, o aumento simultâneo da frota de veículos e do consumo de bens intensificou o transporte de cargas dentro das cidades, gerando impactos negativos como poluição, congestionamentos e escassez de vagas de estacionamento.
 
-A Contextualização deve situar sem projeto em um determinado contexto de mercado, a fim de fornecer informações adicionais que possam ajudar a entender melhor o assunto que você irá abordar. Serve também para definir a relevância do seu assunto, uma vez que mostra o tamanho do mercado em que se está inserido. Ela pode envolver a análise de vários aspectos, como o ambiente histórico, cultural, político e social em que o problema a ser atacado surgiu.
+Em um estudo relevante, Silva et al. (2024) demonstram que o problema das vagas não se restringe apenas aos veículos de passeio, mas também às destinadas à carga e descarga em cidades brasileiras. A pesquisa, realizada em São João Del Rei e Itajubá, ambas cidades localizadas no estado de Minas Gerais, utilizou modelos de geração de viagens de carga e constatou que, em média, essas regiões recebem 539 e 709 viagens diárias, respectivamente. Tal situação é crítica, pois as vagas destinadas a essa finalidade representam apenas 18% da demanda em São João Del Rei e 34,5% em Itajubá.
 
-Escreva de 2 a 3 parágrafos para contetualizar o seu projeto.
+Diversos estudos (Holguin-Veras et al., 2018; Campbell et al., 2018; Flora et al., 2019; Oliveira et al., 2021; kijewska et al., 2022) evidenciam que a escassez de vagas para carga e descarga é um problema crônico nos grandes centros urbanos. Isso tende a agravar também a falta de vagas para veículos de passeio, uma vez que mais espaços precisarão ser destinados a mitigar a demanda da logística urbana, especialmente diante do aumento no consumo de bens.
+
+Outro aspecto que acentua o problema refere-se ao tempo de permanência nas vagas. Como demonstrado por Dowling et al. (2018), quando as vagas são pagas, os motoristas tendem a utilizá-las pelo tempo máximo permitido, reduzindo ainda mais a rotatividade e agravando a escassez de unidades disponíveis.
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Esse projeto busca responder a seguinte pergunta: “É viável criar uma ferramenta web de front-end, utilizando apenas recursos de geolocalização e armazenamento local, que simule de forma eficaz uma plataforma colaborativa para a identificação e o compartilhamento de vagas de estacionamento em tempo real em uma área urbana?”
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Criar uma ferramenta web de front-end, utilizando apenas recursos de geolocalização e armazenamento local, que simule de forma eficaz uma plataforma colaborativa para a identificação e o compartilhamento de vagas de estacionamento em tempo real em uma área urbana
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+**Objetivos Específicos**
+
+·	Desenvolver a estrutura básica com uma interface intuitiva para o mapa e para os controles de utilização da aplicação, garantindo a usabilidade e a acessibilidade da aplicação em diferentes tamanhos de tela.
+·	Integrar um mapa para a visualização dinâmica da área de estacionamento. Além disso, será utilizado geolocalização do navegador para obter a latitude e longitude do usuário para centralizar o mapa na sua posição atual.
+·	Gerenciar a exibição de marcadores (pins) de vagas no mapa com base nas coordenadas salvas, bem como detectar cliques no mapa e criar dinamicamente marcadores de vagas nas coordenadas do clique.
+·	Utilizar o localStorage do navegador para salvar as informações de cada vaga (coordenadas e horário de criação), garantindo que os dados permaneçam mesmo após o recarregamento da página.
+·	Criar uma função de temporização para simular a rotatividade de vagas, removendo os marcadores do mapa e os dados do localStorage após um período de tempo pré-determinado.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Este projeto propõe o desenvolvimento de uma aplicação web front-end otimizada para dispositivos móveis, que simula uma plataforma colaborativa destinada ao compartilhamento de informações sobre a disponibilidade de vagas de estacionamento em uma área urbana específica.
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
+A ferramenta permitirá que os usuários indiquem a localização de vagas livres e visualizem aquelas reportadas por outros participantes. As informações sobre cada vaga de estacionamento desaparecerão automaticamente após um período de tempo predefinido, simulando a alta rotatividade característica do trânsito urbano.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+A proposta surge da necessidade de enfrentar um dos desafios mais recorrentes das cidades modernas: a dificuldade de encontrar vagas de estacionamento. Esse problema contribui para congestionamentos, aumento da poluição e desperdício de tempo. Ao simular uma aplicação que disponibiliza informações em tempo quase real sobre a oferta de vagas, o projeto busca evidenciar como a tecnologia, aliada à colaboração social, podem oferecer soluções para otimizar o fluxo de tráfego e melhorar a experiência urbana.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+O objetivo central não é apenas desenvolver uma aplicação funcional, mas também validar o conceito de que recursos como geolocalização e armazenamento local de dados podem ser aplicados para resolver problemas práticos de maneira simples e eficiente, sem a necessidade de um back-end complexo.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+O público alvo são pessoas que utilizam seus automóveis frequentemente e buscam vagas de estacionamento de forma mais ágil e assertiva nos principais centros urbanos do Brasil.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público se estende a profissionais que se deslocam diariamente, estudantes que precisam estacionar perto de universidades, pessoas com necessidades especiais, moradores e visitantes de bairros com estacionamento limitado. Indivíduos de diferentes faixas etárias, mas com foco em quem busca soluções práticas e rápidas para otimizar o tempo e reduzir o estresse no trânsito.
