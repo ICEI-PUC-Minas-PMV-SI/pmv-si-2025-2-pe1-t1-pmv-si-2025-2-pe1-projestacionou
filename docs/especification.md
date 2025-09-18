@@ -3,7 +3,8 @@
 **Perfis de Usuários**
 
 |Motoristas Diários                                                                                                                                            |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------| |Descrição: 	Indivíduos que utilizam o carro diariamente para realizar atividades do cotidiano em áreas de alta densidade populacional.                       |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Descrição: 	Indivíduos que utilizam o carro diariamente para realizar atividades do cotidiano em áreas de alta densidade populacional                        |
 |Necessidades: 	Otimização do tempo ao reduzir o período gasto procurando estacionamento; Redução do estresse causado pela busca de vagas de estacionamento.   |
 
 |Motoristas a Trabalho                                                                                                                                         |
