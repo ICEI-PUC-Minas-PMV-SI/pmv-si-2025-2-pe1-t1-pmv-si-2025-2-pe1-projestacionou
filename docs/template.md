@@ -29,10 +29,11 @@ Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com
 
 ## Iconografia
 
-Defina os ícones que serão utilizados e suas respectivas funções.
+![Iconografia](img/icons.png)
 
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
+Os ícones acima serão utilizados como marcadores no mapa, de modo a informar ao usuário a disponibilidade de vagas de estacionamento e se são reservadas para público específico.
+
+A prototipação/design foi realizada no figma e está disponível para acesso: [Clique para acessar o projeto](https://www.figma.com/design/c9R7UeOQhN5rUV87W5allO/Estacionei?node-id=55-26&p=f&t=krrmC5zXeIMuPNnH-0)
 
 
 > **Links Úteis**:
