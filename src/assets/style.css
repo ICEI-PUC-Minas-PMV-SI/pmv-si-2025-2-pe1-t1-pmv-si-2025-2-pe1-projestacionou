@@ -20,9 +20,34 @@ main {
     height: calc(100vh - 50px);
     display: grid;
     grid-template-columns: 561px 1fr;
+    overflow-y: hidden;
 }
 
 #mapa {
-    height: 100%;
-    border: 1px solid black;
+    position: relative;
+
+    iframe{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+#mapa button {
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+
+    background-color: rgb(232, 244, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#zoom {
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
 }
