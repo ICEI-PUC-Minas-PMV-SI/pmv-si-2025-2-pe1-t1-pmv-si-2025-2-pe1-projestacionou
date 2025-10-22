@@ -15,3 +15,14 @@ header {
     justify-content: space-between;
     padding: 20px;
 }
+
+main {
+    height: calc(100vh - 50px);
+    display: grid;
+    grid-template-columns: 561px 1fr;
+}
+
+#mapa {
+    height: 100%;
+    border: 1px solid black;
+}
