@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <button class="btn btn-back">Voltar</button>
+    </header>
+
+    <main class="container">
+
+        <aside class="profile-card">
+            <h2 class="profile-name">Nome Sobrenome</h2>
+            
+            <div class="avatar-placeholder">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="#a0a0a0" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" />
+                    <path d="M20 18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18C4 15.7909 7.58172 14 12 14C16.4183 14 20 15.7909 20 18Z" />
+                </svg>
+            </div>
+            
+            <button class="btn btn-upload">Enviar foto</button>
+            
+            <div class="upload-info-box">
+                <p class="upload-info-text">
+                    Imagens enviadas serão automaticamente
+                    redimensionadas e posicionadas.
+                    <br>
+                    Maximum Upload Size: <strong>1 MB</strong>
+                </p>
+            </div>
+        </aside>
+
+        <section class="form-card">
+            
+            <div class="form-header">
+                <h1 class="form-title">Editar Perfil</h1>
+                <div class="form-tab-bar">
+                    <span class="form-tab active">Informações do Usuário</span>
+                </div>
+            </div>
+            
+            <form class="profile-form">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome">
+                    </div>
+                </div>
+
+                <h3 class="form-section-title">Cadastrar Estacionamento</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="logradouro">Logradouro</label>
+                        <input type="text" id="logradouro">
+                    </div>
+                    <div class="form-group">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade">
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado">
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+</body>
+</html>
