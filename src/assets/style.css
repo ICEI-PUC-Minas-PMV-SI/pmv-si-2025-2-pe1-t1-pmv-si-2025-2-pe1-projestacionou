@@ -23,6 +23,17 @@ header {
     }
 }
 
+header button {
+    background-color: #76B947;  
+    color: #FFFFFF;             
+    border: none;
+    border-radius: 8px;         
+    padding: 0.6rem 1rem;   
+    font-size: 0.9rem;
+    font-weight: 600;           
+    cursor: pointer;
+}
+
 main {
     height: calc(100vh - 3.125rem); 
     display: grid;
@@ -54,7 +65,27 @@ main {
 #search-container input {
     width: 100%;
     font-size: 1rem;
-    padding: 5px;
+    color: #444;
+    border: 1px solid #DDD;     
+    border-radius: 8px;         
+    outline: none;              
+    
+    padding: 0.75rem 2.8rem 0.75rem 2.8rem;
+    
+    
+    background-image: 
+       /* Lupa  */
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="%23888888"><path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>'),
+        /* Localização  */
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="%2324436E"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>');
+    
+    background-repeat: no-repeat;
+    background-size: 1.25rem 1.25rem, 1.25rem 1.25rem; 
+    background-position: left 0.75rem center, right 0.75rem center; 
+}
+
+#search-container input::placeholder {
+    color: #999;
 }
 
 #button-container {
@@ -70,7 +101,13 @@ main {
 }
 
 #button-container button {
-    
+    background-color: #76B947; 
+    color: #FFFFFF;            
+    border: none;
+    border-radius: 8px;         
+    padding: 0.75rem 1.25rem;   
+    font-size: 0.9rem;
+    font-weight: 600;           
     cursor: pointer;
 }
 
@@ -108,23 +145,37 @@ main {
     width: 100%;
 }
 
-#zoom button {
-    width: 2.5rem;
-    height: 2.5rem;
-    z-index: 1000;
-    background-color: rgb(232, 244, 0);
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
+#zoom {
+display: flex;
+flex-flow: column;
+gap: 1rem;
+position: absolute;
+right: 3.125rem;
+bottom: 3.125rem;
 }
 
-#zoom {
-    display: flex;
-    flex-flow: column;
-    gap: 1rem;
-    position: absolute;
-    right: 3.125rem;
-    bottom: 3.125rem;
+
+#zoom button {
+ width: 2.5rem;
+ height: 2.5rem;
+ z-index: 1000;
+ border: none;
+ border-radius: 8px;  
+ cursor: pointer;
+ color: white;       
+ font-size: 1.5rem;  
+ font-weight: bold;
+line-height: 1;     
+}
+
+/* Cor do primeiro botão (Azul "+") */
+#zoom button:first-child {
+    background-color: #24436E; 
+}
+
+/* Cor do segundo botão (Verde "-") */
+#zoom button:last-child {
+    background-color: #76B947; 
 }
 
 /* Media Queries */
