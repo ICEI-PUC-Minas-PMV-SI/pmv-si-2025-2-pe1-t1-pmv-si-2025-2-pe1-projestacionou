@@ -34,6 +34,11 @@ header button {
     cursor: pointer;
 }
 
+button a {
+    text-decoration: none;
+    color: white;
+}
+
 main {
     height: calc(100vh - 3.125rem); 
     display: grid;

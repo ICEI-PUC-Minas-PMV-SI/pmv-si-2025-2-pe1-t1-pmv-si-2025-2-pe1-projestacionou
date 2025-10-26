@@ -7,6 +7,7 @@
 
   <!-- ===== CSS INTERNO ===== -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
     :root{
       --bg:#f5f7fb;
       --card:#ffffff;
@@ -23,7 +24,7 @@
     html,body{height:100%}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      font-family: "Inter", sans-serif;
       background: var(--bg);
       color:var(--text);
       display:grid;
@@ -39,8 +40,9 @@
       padding:28px 26px;
     }
     h1{
-      margin:6px 0 18px;
-      font-weight:800;
+      margin:6px 0 50px;
+      font-weight:400;
+      font-size: 23px;
       text-align:center;
       letter-spacing:.2px;
     }
@@ -125,6 +127,19 @@
       position:absolute!important; width:1px;height:1px;padding:0;margin:-1px;
       overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
     }
+
+    button a {
+      text-decoration: none;
+      color: white;
+    }
+
+    img {
+      width: 147px;
+      height: 32px;
+      display: block;
+      margin: auto;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
@@ -147,10 +162,10 @@
         <div class="ok" id="ok-pass">Senha válida ✓</div>
       </div>
 
-      <button class="btn" type="submit">Cadastre-se</button>
+      <button class="btn" type="submit"><a href="cadastro.html">Cadastre-se</a></button>
 
       <p class="row-muted">Já tem uma conta? <a href="login.html">Faça login</a></p>
-      <p class="brand">Estacionou <span aria-hidden="true">📍</span><span class="sr-only">pino de localização</span></p>
+      <a href="index.html"><img src="assets/img/logo-transparente.png" alt="logo"></a>
     </form>
   </main>
 
