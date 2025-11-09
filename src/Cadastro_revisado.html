@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crie sua conta — Estacionou</title>
+
+  <link rel="stylesheet" href="css_cadastro.css">
+</head>
+<body>
+
+  <!-- BOTÃO VOLTAR -->
+  <a href="index.html" class="btn-voltar">Voltar</a>
+
+  <main class="card" role="main">
+    <h1>Crie sua conta</h1>
+
+    <form id="form-signup" novalidate>
+      <div class="field">
+        <label for="username">Nome de usuário</label>
+        <input id="username" name="username" type="text" placeholder="Digite seu nome de usuário" autocomplete="username" required minlength="3" />
+        <div class="error" id="e-user">Informe pelo menos 3 caracteres (apenas letras, números, “.”, “_” e “-”).</div>
+      </div>
+
+      <div class="field password-wrap">
+        <label for="password">Senha</label>
+        <input id="password" name="password" type="password" placeholder="Digite sua senha" autocomplete="new-password" required minlength="6" />
+        <button type="button" class="toggle" aria-controls="password" aria-label="Mostrar/ocultar senha">👁️</button>
+        <div class="error" id="e-pass">A senha precisa de ao menos 6 caracteres.</div>
+        <div class="ok" id="ok-pass">Senha válida ✓</div>
+      </div>
+
+      <button class="btn" type="submit">Cadastre-se</button>
+
+      <p class="row-muted">Já tem uma conta? <a href="login.html">Faça login</a></p>
+
+      <!-- LOGOMARCA COMO TEXTO + EMOJI -->
+      <p class="brand">Estacionou <span aria-hidden="true">📍</span></p>
+    </form>
+  </main>
+
+  <script src="java_cadastro.js"></script>
+</body>
+</html>
