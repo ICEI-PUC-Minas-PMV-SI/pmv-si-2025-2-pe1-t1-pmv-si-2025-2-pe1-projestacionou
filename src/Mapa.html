@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Projeto Vagas – Módulo 2</title>
+
+    <!-- CSS do Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="mapa.css" />
+</head>
+<body>
+
+    <div id="info">
+        <strong>Projeto Vagas – Módulo 2</strong><br>
+        - Leaflet inicializado (M2.1)<br>
+        - Geolocalização / auto-centralização (M2.2)<br>
+        - Marcador da posição do usuário (M2.3)<br>
+        - Locais populares (M2.4)
+    </div>
+
+    <!-- Locais Populares -->
+    <div id="locais-populares">
+        <button data-lat="-19.9167" data-lng="-43.9345">Praça da Liberdade</button>
+        <button data-lat="-19.9150" data-lng="-43.9360">Savassi</button>
+        <button data-lat="-19.9245" data-lng="-43.9418">Mercado Central</button>
+        <button data-lat="-19.9319" data-lng="-43.9386">Praça Sete</button>
+    </div>
+
+    <!-- Div do mapa -->
+    <div id="map"></div>
+
+    <!-- JS do Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- JS externo -->
+    <script src="mapa.js" defer></script>
+</body>
+</html>

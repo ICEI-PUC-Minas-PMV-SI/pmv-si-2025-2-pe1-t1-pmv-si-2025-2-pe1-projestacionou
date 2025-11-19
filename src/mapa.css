@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+#info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    font-size: 14px;
+}
+
+#locais-populares {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#locais-populares button {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    background: #1976d2;
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+#locais-populares button:hover {
+    background: #125a9f;
+}
