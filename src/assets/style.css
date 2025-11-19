@@ -143,10 +143,11 @@ main {
 
 #mapa {
     position: relative;
+    height: 100%;
 }
 
 #map-container {
-    height: 100%;
+    height: calc(100vh - 3.125rem);
     width: 100%;
 }
 

@@ -6,7 +6,7 @@
     <title>Estacionou! - Encontre Vagas</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 <body>
     <header>
@@ -29,32 +29,32 @@
             </div>
 
             <div id="places-grid">
-                <div class="place-card">
+                <div class="place-card" data-lat="-19.9319" data-lng="-43.9386">
                     <img src="assets/img/Local1.png" alt="Praça Sete de Setembro">
                     <p>Praça Sete de Setembro</p>
                 </div>
 
-                <div class="place-card">
+                <div class="place-card" data-lat="-19.8660" data-lng="-43.9710">
                     <img src="assets/img/Local2.png" alt="Mineirão">
                     <p>Mineirão</p>
                 </div>
 
-                <div class="place-card">
+                <div class="place-card" data-lat="-19.9430" data-lng="-43.9720">
                     <img src="assets/img/Local3.png" alt="Arena MRV">
                     <p>Arena MRV</p>
                 </div>
 
-                <div class="place-card">
+                <div class="place-card" data-lat="-19.9167" data-lng="-43.9345">
                     <img src="assets/img/Local4.png" alt="Praça da Liberdade">
                     <p>Praça da Liberdade</p>
                 </div>
 
-                <div class="place-card">
+                <div class="place-card" data-lat="-19.8540" data-lng="-43.9250">
                     <img src="assets/img/Local5.png" alt="Minas Shopping">
                     <p>Minas Shopping</p>
                 </div>
 
-                <div class="place-card">
+                <div class="place-card" data-lat="-19.9245" data-lng="-43.9418">
                     <img src="assets/img/Local6.png" alt="Mercado Central">
                     <p>Mercado Central</p>
                 </div>
@@ -71,8 +71,9 @@
             </div>
         </section>
     </main>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20n6a9c47uKiK6UjGfQyGg1i8Qf00+iK8qFpU8NlXv7l" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/mock_data.js"></script>
     <script src="js/script.js"></script>
+    <script src="mapa.js"></script>
 </body>
 </html>
