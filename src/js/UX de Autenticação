@@ -1,0 +1,99 @@
+/ Simula a verificação de sessão ativa
+function isSessionActive() {
+    // Em um ambiente real, faria uma chamada ao servidor ou verificaria um token JWT
+    return localStorage.getItem('user_session') === 'active';
+}
+
+// Simula o Login
+function login(username, password) {
+    // Simulação de verificação de credenciais
+    if (username === 'usuario1' && password === 'senha123') {
+        localStorage.setItem('user_session', 'active');
+        console.log('Login bem-sucedido. Sessão ativa.');
+        // Redireciona para a página principal (simulada)
+        window.location.href = 'dashboard.html';
+        return true;
+    } else {
+        alert('Nome de usuário ou senha incorretos.');
+        return false;
+    }
+}
+
+// Simula o Logout
+function logout() {
+    localStorage.removeItem('user_session');
+    console.log('Logout realizado. Sessão encerrada.');
+    // Redireciona para a página de login
+    window.location.href = 'index.html';
+}
+
+// Lógica de Redirecionamento para index.html (Página de Login)
+function handleLoginRedirect() {
+    // Se a página atual for a de login (index.html)
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+        if (isSessionActive()) {
+            // Se houver sessão ativa, redireciona para o dashboard (simulado)
+            console.log('Sessão ativa detectada. Redirecionando para dashboard...');
+            window.location.href = 'dashboard.html';
+        }
+    }
+}
+
+// Lógica de Redirecionamento para dashboard.html (Página Protegida)
+function handleProtectedRedirect() {
+    // Se a página atual for uma página protegida (ex: dashboard.html)
+    if (window.location.pathname.endsWith('dashboard.html')) {
+        if (!isSessionActive()) {
+            // Se NÃO houver sessão ativa, redireciona para o login
+            console.log('Nenhuma sessão ativa detectada. Redirecionando para login...');
+            window.location.href = 'index.html';
+        }
+    }
+}
+
+// Garante a acessibilidade básica (foco nos campos de formulário)
+function ensureFormAccessibility() {
+    const usernameInput = document.getElementById('username');
+    if (usernameInput) {
+        usernameInput.setAttribute('aria-label', 'Campo para Nome de Usuário');
+        usernameInput.setAttribute('required', 'true');
+    }
+
+    const passwordInput = document.getElementById('password');
+    if (passwordInput) {
+        passwordInput.setAttribute('aria-label', 'Campo para Senha');
+        passwordInput.setAttribute('required', 'true');
+    }
+
+    const loginButton = document.querySelector('.btn-login');
+    if (loginButton) {
+        loginButton.setAttribute('aria-label', 'Botão Entrar');
+    }
+}
+
+// Inicializa a lógica de UX
+document.addEventListener('DOMContentLoaded', () => {
+    // Aplica acessibilidade
+    ensureFormAccessibility();
+
+    // Lógica de redirecionamento (depende da página)
+    handleLoginRedirect();
+    handleProtectedRedirect();
+
+    // Adiciona listener para o formulário de login
+    const loginForm = document.querySelector('form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            login(username, password);
+        });
+    }
+
+    // Adiciona listener para o botão de Logout (se existir na página)
+    const logoutButton = document.getElementById('logout-btn');
+    if (logoutButton) {
+        logoutButton.addEventListener('click', logout);
+    }
+});
