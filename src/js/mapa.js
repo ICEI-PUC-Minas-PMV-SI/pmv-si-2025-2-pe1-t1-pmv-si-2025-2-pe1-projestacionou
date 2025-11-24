@@ -1,7 +1,10 @@
+var mapa;
+const activeMarkers = {}; 
+
 document.addEventListener('DOMContentLoaded', function() {
 
     // M2.1 – Inicialização do Mapa
-    var mapa = L.map("map-container", {
+    mapa = L.map("map-container", {
         zoomControl: false
     }).setView([-19.9191, -43.9386], 13);
 
@@ -56,8 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const LOCALSTORAGE_KEY = 'vagas_disponiveis';
     const TEMPO_DE_VIDA_MS = 2 * 60 * 1000;
 
-    const activeMarkers = {}; 
-
     // Lógica de verificação de Login 
     function getUsuarioLogadoId() {
         const session = localStorage.getItem('userLogado');
@@ -86,49 +87,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Função de Atualização da Interface
     function atualizarInterfaceLogin() {
-    const authContainer = document.getElementById('auth-container');
-    let authButton = document.getElementById('auth-button'); // O botão 'Entrar' inicial
-    let logoutButton = document.getElementById('btn-logout'); // O botão 'Sair'
+        const authContainer = document.getElementById('auth-container');
+        let authButton = document.getElementById('auth-button'); 
+        let logoutButton = document.getElementById('btn-logout'); 
 
-    if (!authContainer) return;
+        if (!authContainer) return;
 
-    if (usuarioEstaLogado()) {
-        if (!authButton) {
-             authButton = document.createElement('button');
-             authButton.id = 'auth-button';
-             authContainer.prepend(authButton); 
+        if (usuarioEstaLogado()) {
+            if (!authButton) {
+                authButton = document.createElement('button');
+                authButton.id = 'auth-button';
+                authContainer.prepend(authButton); 
+            }
+
+            authButton.textContent = 'Página de Perfil';
+            authButton.onclick = () => { 
+                window.location.href = 'perfil.html';
+            };
+
+            if (!logoutButton) {
+                logoutButton = document.createElement('button');
+                logoutButton.id = 'btn-logout';
+                logoutButton.textContent = 'Sair';
+                logoutButton.onclick = fazerLogout; 
+                authContainer.appendChild(logoutButton);
+            }
+            
+        } else {
+            if (logoutButton) {
+                logoutButton.remove();
+            }
+            
+            if (!authButton) {
+                authButton = document.createElement('button');
+                authButton.id = 'auth-button';
+                authContainer.prepend(authButton); 
+            }
+
+            authButton.textContent = 'Entrar';
+            authButton.onclick = () => {
+                window.location.href = 'login.html';
+            };
         }
-
-        authButton.textContent = 'Página de Perfil';
-        authButton.onclick = () => { 
-            window.location.href = 'perfil.html';
-        };
-
-        if (!logoutButton) {
-            logoutButton = document.createElement('button');
-            logoutButton.id = 'btn-logout';
-            logoutButton.textContent = 'Sair';
-            logoutButton.onclick = fazerLogout; 
-            authContainer.appendChild(logoutButton);
-        }
-        
-    } else {
-        if (logoutButton) {
-            logoutButton.remove();
-        }
-        
-        if (!authButton) {
-             authButton = document.createElement('button');
-             authButton.id = 'auth-button';
-             authContainer.prepend(authButton); 
-        }
-
-        authButton.textContent = 'Entrar';
-        authButton.onclick = () => {
-             window.location.href = 'login.html';
-        };
     }
-}
 
     // Lógica de Persistência e Leitura de Dados
     function getPinsSalvos() {
@@ -189,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function carregarPinsNoMapa() {
-        const pins = getPinsSalvos();
+        const pins = getPinsSalvos(); // <-- AQUI VEM O PROBLEMA
         pins.forEach(pin => {
             if (!activeMarkers[pin.id_pin]) {
                 renderizarPin(pin);
@@ -305,9 +306,14 @@ window.removerPinManual = function(id_pin) {
     if (confirm("Tem certeza que deseja remover esta vaga?")) {
         
         const LOCALSTORAGE_KEY = 'vagas_disponiveis';
-        
+      
         let pins = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY) || '[]');
         const pinsAtualizados = pins.filter(pin => pin.id_pin !== id_pin);
         localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(pinsAtualizados));
+
+        if (activeMarkers[id_pin]) {
+            activeMarkers[id_pin].remove();
+            delete activeMarkers[id_pin];
+        }
     }
 };
