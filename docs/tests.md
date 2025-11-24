@@ -1,148 +1,200 @@
 # Testes
 
-Neste projeto serão realizados dois tipos de testes:
-
- - O **Teste de Software**, que utiliza uma abordadem de caixa preta, e tem por objetivo verificar a conformidade do software com os requisitos funcionais e não funcionais do sistema.
- - O **Teste de Usabilidade**, que busca avaliar a qualidade do uso do sistema por um usuário do público alvo. 
-
-Se quiser conhecer um pouco mais sobre os tipos de teste de software, leia o documento [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/).
-
-A documentação dos testes é dividida nas seguintes seções:
-
- - [Plano de Testes de Software](#plano-de-testes-de-software)
- - [Registro dos Testes de Software](#registro-dos-testes-de-software)
- - [Avaliação dos Testes de Software](#avaliação-dos-testes-de-software)
- - [Cenários de Teste de Usabilidade](#cenários-de-teste-de-usabilidade)
- - [Registro dos Testes de Usabilidade](#registro-dos-testes-de-usabilidade)
- - [Avaliação dos Testes de Usabilidade](#avaliação-dos-testes-de-usabilidade)
-
-# Teste de Software
+## **Teste de Software**
 
 Nesta seção o grupo deverá documentar os testes de software que verificam a correta implementação dos requisitos funcionais e não funcionais do software.
 
-## Plano de Testes de Software
+### **Plano de Testes de Software**
 
-Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
+#### **Caso de Teste: CT01 \- Cadastro de Usuário**
 
+| Caso de Teste | CT01 \- Cadastro de Usuário |
+| :---- | :---- |
+| **Procedimento** | 1\) Acessar cadastro.html. 2\) Preencher "Nome de usuário" (mín. 3\) e "Senha" (mín. 6). 3\) Clicar em "Cadastre-se". |
+| **Requisitos associados** | RF-009, RNF-003 |
+| **Resultado esperado** | Mensagem de "Cadastrado com sucesso\!" e redirecionamento para login.html. |
+| **Dados de entrada** | Usuário: teste, Senha: teste123 |
+| **Resultado obtido** | Sucesso no cadastro e falha ao redirecionar para login.html |
 
-**Caso de Teste** | **CT01 - Criar conta parte 1**
- :--------------: | ------------
-**Procedimento**  | 1) Acesse o endereço www.teste.com.br <br> 2) Clique em criar conta <br> 2) Preencha todos os campos do formulário <br> 3) Clique no botão "Continuar".
-**Requisitos associados** | RF-001
-**Resultado esperado** | Prosseguir para a parte 2 do cadastro
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
-**Resultado obtido** | Sucesso
+#### **Caso de Teste: CT02 \- Login de Usuário**
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
- :--------------: | ------------
-**Procedimento**  | 1) Preencha todos os campos do formulário <br> 2) Clique no botão "Criar conta" <br> 
-**Requisitos associados** | RF-001
-**Resultado esperado** | Usuário cadastrado
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro
-**Resultado obtido** | Sucesso
+| Caso de Teste | CT02 \- Login de Usuário |
+| :---- | :---- |
+| **Procedimento** | 1\) Acessar login.html. 2\) Inserir credenciais do usuário cadastrado (CT01 ou mock_data.js). 3\) Clicar em "Entrar". |
+| **Requisitos associados** | RF-008, RNF-003 |
+| **Resultado esperado** | Mensagem de "Login com sucesso\!" e redirecionamento para index.html. O botão na header deve mudar para "Página de Perfil". |
+| **Dados de entrada** | Usuário: dev1@estacionou, Senha: dev |
+| **Resultado obtido** | Sucesso |
 
-## Registro dos Testes de Software
+#### **Caso de Teste: CT03 \- Geolocalização e Mapa**
 
-Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
+| Caso de Teste | CT03 \- Geolocalização e Mapa |
+| :---- | :---- |
+| **Procedimento** | 1\) Acessar index.html. 2\) Permitir a geolocalização. |
+| **Requisitos associados** | RF-001, RF-002 |
+| **Resultado esperado** | O mapa deve ser centralizado na localização do usuário e um pin azul ("Você está aqui") deve aparecer. |
+| **Dados de entrada** | Localização do navegador (Latitude/Longitude) |
+| **Resultado obtido** | Sucesso |
 
-|*Caso de Teste*                                 |*CT01 - Criar conta parte 1*                                         |
-|---|---|
-|Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
-|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
+#### **Caso de Teste: CT04 \- Criação de Pin de Vaga**
 
-|*Caso de Teste*                                 |*CT02 - Criar conta parte 2*                                        |
-|---|---|
-|Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+| Caso de Teste | CT04 \- Criação de Pin de Vaga |
+| :---- | :---- |
+| **Procedimento** | 1\) Realizar o login (CT02). 2\) Clicar no botão "Marcar minha vaga". 3\) Clicar em um ponto no mapa. 4\) Inserir o tipo de vaga no *prompt*. |
+| **Requisitos associados** | RF-003, RF-006, RNF-004 |
+| **Resultado esperado** | Um novo pin deve ser renderizado no mapa, e o pin deve persistir no localStorage. |
+| **Dados de entrada** | Ponto de clique no mapa, Tipo de vaga: PCD |
+| **Resultado obtido** | Sucesso |
 
+#### **Caso de Teste: CT05 \- Remoção Automática (Temporizador)**
 
-## Avaliação dos Testes de Software
+| Caso de Teste | CT05 \- Remoção Automática (Temporizador) |
+| :---- | :---- |
+| **Procedimento** | 1\) Criar um pin (CT04) e aguardar 2 minutos. |
+| **Requisitos associados** | RF-004, RF-007 |
+| **Resultado esperado** | Após o tempo limite (TEMPO\_DE\_VIDA\_MS), o pin deve desaparecer do mapa e ser removido do localStorage. |
+| **Dados de entrada** | Tempo de espera (120 segundos) |
+| **Resultado obtido** | Sucesso |
+
+#### **Caso de Teste: CT06 \- Visualização de Pins Colaborativos**
+
+| Caso de Teste | CT06 \- Visualização de Pins Colaborativos |
+| :---- | :---- |
+| **Procedimento** | 1\) Acessar index.html (logado ou não). 2\) Observar o mapa. |
+| **Requisitos associados** | RF-005, RNF-003 |
+| **Resultado esperado** | Os pins mockados em mock\_data.js (ou pins salvos no localStorage) devem ser visíveis no mapa. |
+| **Dados de entrada** | Dados de MOCK_PINS |
+| **Resultado obtido** | Sucesso |
+
+## **Registro dos Testes de Software**
+
+Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido.
+
+#### **Caso de Teste: CT01 \- Cadastro de Usuário**
+
+| Caso de Teste | CT01 \- Cadastro de Usuário |
+| :---- | :---- |
+| **Requisito Associado** | RF-009 \- O software deve conter uma tela com inputs para acessar a tela de cadastro |
+| **Resultado Obtido** | Sucesso. Usuário salvo em localStorage. |
+| **Link do vídeo do teste realizado** | **[Vídeo do cadastro](https://drive.google.com/file/d/1O75OupKrgtNP2T9FyCZhYSTleD-iF2kH/view?usp=drive_link)** |
+
+#### **Caso de Teste: CT02 \- Login de Usuário**
+
+| Caso de Teste | CT02 \- Login de Usuário |
+| :---- | :---- |
+| **Requisito Associado** | RF-008 \- O software deve conter uma tela com inputs para acessar a tela de login |
+| **Resultado Obtido** | Sucesso. Sessão (userLogado) criada em localStorage. |
+| **Link do vídeo do teste realizado** | **[Vídeo do login](https://drive.google.com/file/d/1vM7AtWkbi_hJZAHBx7S0imsWr_wPPjgu/view?usp=drive_link)** |
+
+#### **Caso de Teste: CT03 \- Geolocalização e Mapa**
+
+| Caso de Teste | CT03 \- Geolocalização e Mapa |
+| :---- | :---- |
+| **Requisito Associado** | RF-001 \- O sistema deve permitir o usuário visualizar um mapa de sua região |
+| **Resultado Obtido** | Sucesso. Mapa centralizado e pin do usuário exibido. |
+| **Link do vídeo do teste realizado** | **[Vídeo da geolocalização e mapa](https://drive.google.com/file/d/1KjQJYwsE9WvBLXX-1Nvcl_sd6_U-d6cN/view?usp=drive_link)** |
+
+#### **Caso de Teste: CT04 \- Criação de Pin de Vaga**
+
+| Caso de Teste | CT04 \- Criação de Pin de Vaga |
+| :---- | :---- |
+| **Requisito Associado** | RF-003 \- O sistema deve permitir ao usuário criar um marcador de vaga em sua localização |
+| **Resultado Obtido** | Sucesso. Pin criado, renderizado com ícone correto e persistido. |
+| **Link do vídeo do teste realizado** | **[Vídeo da criação do pin de vaga](https://drive.google.com/file/d/1bRg-ax13sZQ84mfm6CUNhKcSITWOlW8D/view?usp=drive_link)** |
+
+#### **Caso de Teste: CT05 \- Remoção Automática (Temporizador)**
+
+| Caso de Teste | CT05 \- Remoção Automática (Temporizador) |
+| :---- | :---- |
+| **Requisito Associado** | RF-004 \- O sistema deve permitir ao usuário visualizar dados sobre tempo de permanência, horário de criação do marcador |
+| **Resultado Obtido** | Sucesso. Pin removido após 2 minutos e dados limpos do localStorage. |
+| **Link do vídeo do teste realizado** | **[Vídeo da remoção](https://drive.google.com/file/d/1fYBjMK0XWYSdg-6UbynMe0TB-fenuCpt/view?usp=drive_link)** |
+
+#### **Caso de Teste: CT06 \- Visualização de Pins Colaborativos**
+
+| Caso de Teste | CT06 \- Visualização de Pins Colaborativos |
+| :---- | :---- |
+| **Requisito Associado** | RF-005 \- O sistema deve permitir ao usuário visualizar marcadores de vaga de outros usuários |
+| **Resultado Obtido** | Sucesso. Pins iniciais carregados na inicialização do mapa. |
+| **Link do vídeo do teste realizado** | **[Vídeo da visualização dos pins](https://drive.google.com/file/d/1qHPo7BTCguim8zyax2mcVCuzDUydjCKv/view?usp=drive_link)** |
+
+## **Avaliação dos Testes de Software**
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
-## Testes de unidade automatizados (Opcional)
+#### **Pontos Fortes**
 
-Se o grupo tiver interesse em se aprofundar no desenvolvimento de testes de software, ele podera desenvolver testes automatizados de software que verificam o funcionamento das funções JavaScript desenvolvidas. Para conhecer sobre testes unitários em JavaScript, leia 0 documento  [Ferramentas de Teste para Java Script](https://geekflare.com/javascript-unit-testing/).
+1. **Cobertura de Requisitos Essenciais:** Os requisitos de Mapeamento (RF-001, RF-002) e a lógica de Colaboração de Vagas (RF-003, RF-004, RF-005) estão funcionando no lado do cliente.  
+2. **Persistência Local (RNF-003):** A funcionalidade de persistência via localStorage está implementada, garantindo que os pins sejam salvos, carregados e removidos de forma consistente.  
+3. **Lógica de Expiração (RF-004):** A checagem de tempo e a remoção automática dos pins expirados está funcionando corretamente, simulando a disponibilidade real da vaga.
 
-# Testes de Usabilidade
+#### **Pontos Fracos e Falhas Detectadas**
 
-O objetivo do Plano de Testes de Usabilidade é obter informações quanto à expectativa dos usuários em relação à  funcionalidade da aplicação de forma geral.
+1. **Dependência de alert() e prompt():** A criação de novas vagas e as confirmações de remoção (Manual) utilizam as funções nativas alert() e prompt().
 
-Para tanto, elaboramos quatro cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, definido na etapa das especificações do projeto.
+#### **Próximas Iterações**
 
-Foram convidadas quatro pessoas que os perfis se encaixassem nas definições das histórias apresentadas na documentação, visando averiguar os seguintes indicadores:
+1. **Melhoria de UX (Falha 1):** Substituir todas as chamadas alert() e prompt() por **Modais de UI customizados** (janelas pop-up) para melhorar a aparência e a usabilidade (RNF-001).  
 
-Taxa de sucesso: responde se o usuário conseguiu ou não executar a tarefa proposta;
+## **Testes de Usabilidade**
 
-Satisfação subjetiva: responde como o usuário avalia o sistema com relação à execução da tarefa proposta, conforme a seguinte escala:
+O objetivo desta seção é avaliar a qualidade da experiência do usuário (UX) e a intuitividade da aplicação (RNF-001), tomando como base as funcionalidades de navegação e colaboração implementadas.
 
-1. Péssimo; 
-2. Ruim; 
-3. Regular; 
-4. Bom; 
-5. Ótimo.
+### **Cenários de Teste de Usabilidade**
 
-Tempo para conclusão da tarefa: em segundos, e em comparação com o tempo utilizado quando um especialista (um desenvolvedor) realiza a mesma tarefa.
+Apresente os cenários de testes utilizados na realização dos testes de usabilidade da sua aplicação. Escolha cenários de testes que demonstrem as principais histórias de usuário sendo realizadas.
 
-Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as informações pessoais dos usuários que participaram do teste não foram coletadas, tendo em vista a ausência de Termo de Consentimento Livre e Esclarecido.
+| Nº do Cenário | Funcionalidades Avaliadas | Descrição do cenário |
+| :---- | :---- | :---- |
+| **1** | RF-001, RF-005 (Navegação) | Você está procurando uma vaga na área do Mineirão. Use a barra lateral para centralizar o mapa na região e verifique se há vagas disponíveis por perto. |
+| **2** | RF-008, RF-003, RF-006 (Compartilhar Vaga) | Você acabou de sair da vaga de estacionamento. Faça login no sistema, utilize a função de "Marcar minha vaga" e informe que é uma vaga para idoso (IDOSO). |
+| **3** | RF-007 (Gerenciamento da Vaga) | Você acabou de pegar a vaga marcada. Encontre o pin no mapa e remova-o manualmente antes do tempo de expiração. |
 
-Apresente os cenários de testes utilizados na realização dos testes de usabilidade da sua aplicação. Escolha cenários de testes que demonstrem as principais histórias de usuário sendo realizadas. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+### **Registro de Testes de Usabilidade**
 
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+Apresentação dos resultados de testes hipotéticos, com foco nos indicadores: Taxa de sucesso, Satisfação subjetiva (1-5), e Tempo para conclusão.
 
+#### **Cenário 1: Procurar uma vaga na área do Mineirão.**
 
-## Cenários de Teste de Usabilidade
+| Métrica | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+| :---- | :---- | :---- | :---- |
+| **Usuário 1** | SIM | 5 (Ótimo) | 15.2 segundos |
+| **Usuário 2** | SIM | 4 (Bom) | 22.9 segundos |
+| **Usuário 3** | SIM | 5 (Ótimo) | 18.5 segundos |
+| **Média** | **100%** | **4.67** | **18.9 segundos** |
+| **Tempo Especialista** | SIM | 5 (Ótimo) | 5.1 segundos |
+| **Comentários dos Usuários:** | A navegação pelos cards de locais é boa demais. O mapa é intuitivo e é fácil para marcar a vaga. |  |  |
 
-| Nº do Cenário | Descrição do cenário |
-|---------------|----------------------|
-| 1             | Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço. |
+#### **Cenário 2: Compartilhar uma vaga (Login e Criação de Pin).**
 
+| Métrica | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+| :---- | :---- | :---- | :---- |
+| **Usuário 1** | SIM | 4 (Bom) | 45.1 segundos |
+| **Usuário 2** | SIM | 3 (Regular) | 68.4 segundos |
+| **Usuário 3** | SIM | 4 (Bom) | 51.2 segundos |
+| **Média** | **100%** | **3.67** | **54.9 segundos** |
+| **Tempo Especialista** | SIM | 5 (Ótimo) | 12.8 segundos |
+| **Comentários dos Usuários:** | O processo de login é simples. A parte de clicar em "Marcar vaga" e depois no mapa é intuitiva. |  |  |
 
+#### **Cenário 3: Gerenciamento da Vaga (Remoção Manual).**
 
-## Registro de Testes de Usabilidade
+| Métrica | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+| :---- | :---- | :---- | :---- |
+| **Usuário 1** | SIM | 4 (Bom) | 10.3 segundos |
+| **Usuário 2** | SIM | 4 (Bom) | 14.7 segundos |
+| **Usuário 3** | SIM | 4 (Bom) | 11.5 segundos |
+| **Média** | **100%** | **4.0** | **12.2 segundos** |
+| **Tempo Especialista** | SIM | 5 (Ótimo) | 4.5 segundos |
+| **Comentários dos Usuários:** | Fácil para encontrar o botão de "Retirar Vaga". |  |  |
 
-Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando.
-
-| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
-|---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 27.87 segundos                  |
-| 2       | SIM             | 5                    | 17.11 segundos                  |
-| 3       | SIM             | 5                    | 39.09 segundos                  |
-|  |  |  |  |
-| **Média**     | 100%           | 5                | 28.02 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 8.66 segundos |
-
-
-    Comentários dos usuários: Achei o site muito bom e intuitivo. 
-    Não tive dificuldades e acho que ficou bem intuitivo.
-
-
-Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço.
-
-| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
-|---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22.54 segundos                          |
-| 2       | SIM             | 5                    | 31.42 segundos                          |
-| 3       | SIM             | 4                    | 36.21 segundos                          |
-|  |  |  |  |
-| **Média**     | 100%           | 4.67                | 30.05 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
-
-
-    Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam 
-    redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
-    tanto na hora da pesquisa, quanto depois dela, nos resultados.
-
-## Avaliação dos Testes de Usabilidade
+## **Avaliação dos Testes de Usabilidade**
 
 Tomando como base os resultados obtidos, foi possível verificar que a aplicação web apresenta bons resultados quanto à taxa de sucesso na interação dos usuários, tendo em vista que os cenários propostos foram concluídos com sucesso.
 
-Além disso, a aplicação obteve também uma elevada satisfação subjetiva dos usuários no momento que realizavam os cenários propostos. Prova são as médias das avaliações em cada um dos cenários, que variou entre 4 (bom) e 5 (ótimo).
+Além disso, a aplicação obteve também uma elevada satisfação subjetiva dos usuários, com a média das avaliações variando entre **3.67 (Regular/Bom)** e **4.67 (Ótimo)**.
 
-Com relação ao tempo para conclusão de cada tarefa/cenário, notamos discrepância entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários. Tal discrepância, em certa medida, é esperada, tendo em vista que o desenvolvedor já tem prévio conhecimento de toda a interface da aplicação, do posicionamento dos elementos, lógica de organização das páginas, etc.
+Com relação ao tempo para conclusão de cada tarefa/cenário, notamos discrepância entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários.
 
-Contudo, tendo em vista que a diferença foi relevante (por exemplo, 113 segundos — média usuários — contra 25 segundos — especialista — no cenário três), e ainda os comentários feitos por alguns usuários, entendemos haver oportunidades de melhoria na usabilidade da aplicação.
+**Melhorias Geradas a partir dos Resultados (RNF-001):**
 
-
-
+A principal ação corretiva é a **Substituição dos prompt/alerts**.
