@@ -11,7 +11,6 @@ Ferramenta web de front-end que utilizará recursos de geolocalização e armaze
 ## Integrantes
 
 * Mateus Santos Toledo
-* Henrique Wilde Emilio Bebiano Martins
 * João Pedro Pereira Almeida
 * José Guilherme Chaves Albert
 * Lucas Gabriel Chaves Nogueira de Moura
