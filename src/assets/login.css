@@ -101,9 +101,9 @@ h2 {
     height: auto;
 }
 .rodape-texto {
-  color: #28558a; /* cor laranja */
-  font-family: 'Arial black', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  padding: 10px;
+    color: #28558a; /* cor laranja */
+    font-family: 'Arial black', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
 }
