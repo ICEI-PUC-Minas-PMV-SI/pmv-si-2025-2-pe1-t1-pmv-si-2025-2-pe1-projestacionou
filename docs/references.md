@@ -53,6 +53,3 @@ Improving freight parking needs in Brazilian cities with city logistics initiati
 on Transport Policy, [S.l.], v. 16, art. 101184, jun. 2024. Disponível em:
 https://doi.org/10.1016/j.cstp.2024.101184
 . Acesso em: 1 set. 2025.
-
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/referencias/)
