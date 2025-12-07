@@ -196,6 +196,10 @@ line-height: 1;
         display: none;
     }
 
+    #mapa, #map-container {
+        z-index: 1 !important; 
+    }
+
     #mapa {
         height: 100%;
     }
@@ -211,6 +215,10 @@ line-height: 1;
         grid-template-columns: 1fr;
         height: calc(100vh - 3.125rem); 
         position: relative; 
+    }
+
+    #mapa, #map-container {
+        z-index: 1 !important; 
     }
 
     #mapa {
@@ -239,6 +247,10 @@ line-height: 1;
         grid-template-columns: 1fr;
         height: calc(100vh - 3.125rem); 
         position: relative; 
+    }
+
+    #mapa, #map-container {
+        z-index: 1 !important; 
     }
 
     #mapa {
