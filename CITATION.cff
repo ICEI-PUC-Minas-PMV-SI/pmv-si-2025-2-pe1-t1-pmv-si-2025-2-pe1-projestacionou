@@ -2,32 +2,37 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: Web Application Template
+title: Estacionou!
 message: >-
   Repositório padrão para o Eixo 1 - Projeto 1: Aplicações
   Web da PUC Minas.
 type: software
 authors:
-  - given-names: Aluno 1
-    family-names: Nome Completo
-    email: aluno@pucminas.br
+  - given-names: João Pedro
+    family-names: Pereira
     affiliation: PUC Minas
-  - given-names: Hugo
-    name-particle: 'B '
-    family-names: de Paula
-    name-suffix: Prof.
-    email: hugo@pucminas.br
+  - given-names: José Guilherme
+    family-names: Chaves
     affiliation: PUC Minas
-    orcid: 'https://orcid.org/0000-0002-6193-3205'
+  - given-names: Lucas Gabriel
+    family-names: Chaves
+    affiliation: PUC Minas
+  - given-names: Mateus
+    family-names: Toledo
+    affiliation: PUC Minas
+  - given-names: Matheus
+    family-names: Câmara
+    affiliation: PUC Minas
 repository-code: >-
-  https://github.com/ICEI-PUC-Minas-PMV-SI/WebApplicationProject-Template
+  https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe1-t1-pmv-si-2025-2-pe1-projestacionou
+url: 'https://pmv-si-2025-2-pe1-t1-pmv-si-2025-2.vercel.app/'
 abstract: >-
-  Descrever resumidamente, em um ou dois parágrafos, o
-  projeto que foi desenvolvido.
+  Ferramenta web front-end que utiliza recursos de geolocalização e armazenamento local para simular de forma
+  eficaz uma plataforma colaborativa para a identificação e o compartilhamento de vagas de estacionamento em tempo
+  real em uma área urbana.
 keywords:
   - Desenvolvimento Web
   - HTML
   - CSS
-  - JavaScript
-  - Template
-date-released: '2024-06-23'
+  - Javascript
+date-released: '2025-12-07'
