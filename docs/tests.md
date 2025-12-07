@@ -14,7 +14,7 @@ Nesta seção o grupo deverá documentar os testes de software que verificam a c
 | **Requisitos associados** | RF-009, RNF-003 |
 | **Resultado esperado** | Mensagem de "Cadastrado com sucesso\!" e redirecionamento para login.html. |
 | **Dados de entrada** | Usuário: teste, Senha: teste123 |
-| **Resultado obtido** | Sucesso no cadastro e falha ao redirecionar para login.html |
+| **Resultado obtido** | Sucesso no cadastro e sucesso ao redirecionar para login.html |
 
 #### **Caso de Teste: CT02 \- Login de Usuário**
 
