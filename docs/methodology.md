@@ -14,3 +14,4 @@ A filosofia Lean, por sua vez, complementará o Scrum ao orientar o time a focar
 - VSCode como ambiente de desenvolvimento - https://code.visualstudio.com/
 - Microsoft Teams para reuniões - https://teams.microsoft.com/
 - Trello para gerenciamento do projeto - https://trello.com/
+- Vercel para hospedagem da aplicação - https://vercel.com/
